@@ -1,0 +1,12 @@
+services:
+  gonetmon:
+    image: Jellayy/gonetmon
+    container_name: gonetmon
+    restart: unless-stopped
+    environment:
+      INFLUX_HOST: https://xxx.com
+      INFLUX_TOKEN: xxx
+      INFLUX_ORG_NAME: yourorg
+      INFLUX_BUCKET: gonetmon
+    # volumes:
+      # - config.yaml:config.yaml # custom ping config pass
